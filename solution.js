@@ -21,3 +21,28 @@ function isSorted(arr, index = 0) {
     return isSorted(arr, index + 1);
 }
 console.log(isSorted([2, 4, 6, 7]));
+
+
+// Reverse a String Using Recursion;
+function printChars(str, index = 0) {
+    if (index === str.length) return ;
+    console.log(str[index]);
+    printChars(str, index + 1);
+}
+printChars("Hello");
+// Recerse String;
+function reverseString(str, index = str.length - 1) {
+    if (index < 0) return "";
+    console.log(str[index]);
+    return str[index] + reverseString(str, index - 1);
+}
+reverseString("Hello");
+
+
+// Check if a String Is Palindrome Using Recursion;
+function isPalindrome(str, left = 0, right = str.length - 1) {
+    if (left >= right ) return true;
+    if (str[left] !== str[right]) return false;
+    return isPalindrome(str, left + 1, right - 1);
+}
+console.log(isPalindrome("madam"));
