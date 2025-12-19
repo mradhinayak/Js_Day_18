@@ -12,3 +12,12 @@ function sum(arr, index = 0) {
     return arr[index] + sum(arr, index + 1);
 }
 console.log(sum([2, 4, 4, 3]));
+
+
+// Check if an Array Is Sorted (Ascending) Using Recursion;
+function isSorted(arr, index = 0) {
+    if (index === arr.length - 1) return true;
+    if(arr[index] > arr[index + 1]) return false;
+    return isSorted(arr, index + 1);
+}
+console.log(isSorted([2, 4, 6, 7]));
